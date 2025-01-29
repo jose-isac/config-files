@@ -11,7 +11,7 @@ printf "\nCreating config files directories...\n"
 mkdir -p "$HOME/.config/fastfetch" "$HOME/.config/kitty"
 
 echo "Configuring Kitty terminal.."
-stow --target="/home/${HOME}/.config/kitty" kitty
+stow --target="${HOME}/.config/kitty" kitty
 
 echo "Configuring Vim..."
 stow --dotfiles --target="${HOME}" vim
