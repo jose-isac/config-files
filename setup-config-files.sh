@@ -19,4 +19,4 @@ stow --dotfiles --target="${HOME}" vim
 echo "Configuring Fastfetch.."
 stow --dotfiles --target="${HOME}/.config/fastfetch/" fastfetch
 
-printf "\nDone! :)"
+printf "\nDone! :)\n"
