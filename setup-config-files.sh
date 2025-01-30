@@ -8,13 +8,16 @@ fi
 
 echo "Stow installation has finished."
 printf "\nCreating config files directories...\n"
-mkdir -p "$HOME/.config/fastfetch" "$HOME/.config/kitty"
+mkdir -p "$HOME/.config/fastfetch" "$HOME/.config/kitty" "$HOME/.config/nvim" "$HOME/.config/fish/functions"
 
 echo "Configuring Kitty terminal.."
 stow --target="${HOME}/.config/kitty" kitty
 
-echo "Configuring Vim..."
-stow --dotfiles --target="${HOME}" vim
+echo "Configuring Fish..."
+stow --target="${HOME}/.config/fish" fish
+
+echo "Configuring NeoVim..."
+stow --dotfiles --target="${HOME}/.config/nvim" nvim
 
 echo "Configuring Fastfetch.."
 stow --dotfiles --target="${HOME}/.config/fastfetch/" fastfetch
